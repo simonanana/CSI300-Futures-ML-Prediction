@@ -1,0 +1,89 @@
+# ============================================================================
+# Python
+# ============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+*.whl
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# ============================================================================
+# Jupyter Notebook
+# ============================================================================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ============================================================================
+# Data Files — Full datasets excluded due to licensing
+# ============================================================================
+# Direction prediction data
+data/direction/train_2015_2023.xlsx
+data/direction/test_2024_2025.xlsx
+
+# Volatility prediction data
+data/volatility/train_2015_2023.csv
+data/volatility/test_2024_2025.csv
+
+# Sentiment prediction data
+data/sentiment/sentiment_training_data.csv
+
+# Keep sample files (tracked)
+!data/direction/sample_direction.csv
+!data/volatility/sample_volatility.csv
+!data/sentiment/sample_sentiment.csv
+
+# Generic data patterns
+*.pkl
+*.h5
+*.hdf5
+*.parquet
+
+# ============================================================================
+# Model Artifacts
+# ============================================================================
+models/
+*.joblib
+*.pickle
+*.pt
+*.pth
+*.onnx
+*.pb
+
+# ============================================================================
+# OS & IDE
+# ============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# ============================================================================
+# Misc
+# ============================================================================
+*.log
+*.tmp
+*.bak
+*.swp
