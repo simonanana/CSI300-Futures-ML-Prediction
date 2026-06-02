@@ -118,6 +118,3 @@ pip install numpy pandas scikit-learn xgboost lightgbm catboost tensorflow shap 
 
 > **Note:** Data files are not included in this repository due to licensing restrictions.
 
-## License
-
-This project is released for academic and educational purposes.
