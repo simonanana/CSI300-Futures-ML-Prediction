@@ -58,8 +58,8 @@ csi300-futures-ml-prediction/
 │   ├── README.md                       # Data dictionary and sourcing instructions
 │   ├── direction/
 │   │   ├── sample_direction.csv        # Sample data (first 20 rows)
-│   │   ├── train_2015_2023.xlsx        # Full training set (not included)
-│   │   └── test_2024_2025.xlsx         # Full testing set (not included)
+│   │   ├── train_2015_2023.xlsx        # Full training set
+│   │   └── test_2024_2025.xlsx         # Full testing set
 │   ├── volatility/
 │   │   ├── sample_volatility.csv
 │   │   ├── train_2015_2023.csv
