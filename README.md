@@ -46,24 +46,47 @@ This demonstrates the practical value of sentiment breakthrough prediction as a 
 ## Repository Structure
 
 ```
-├── csi300_ml_prediction.ipynb    # Main notebook (all 3 tasks)
+csi300-futures-ml-prediction/
+│
 ├── README.md
-├── data/                         # Data directory (not included)
-│   ├── train_2015_2023.xlsx
-│   ├── test_2024_2025.xlsx
-│   ├── vol_train_2015_2023.csv
-│   ├── vol_test_2024_2025.csv
-│   └── sentiment_training_data.csv
-└── output/                       # Generated results & plots
-    ├── direction_prediction_results.csv
-    ├── roc_curves_direction.png
-    ├── shap_summary_direction.png
-    ├── volatility_prediction_results.csv
-    ├── volatility_model_comparison.png
-    ├── regime_analysis_volatility.csv
-    ├── sentiment_classification_results.csv
-    ├── sentiment_strategy_results.csv
-    └── sentiment_backtest_visualization.png
+├── requirements.txt
+├── .gitignore
+│
+├── csi300_ml_prediction.ipynb          # Main notebook — all three tasks
+│
+├── data/
+│   ├── README.md                       # Data dictionary and sourcing instructions
+│   ├── direction/
+│   │   ├── sample_direction.csv        # Sample data (first 20 rows)
+│   │   ├── train_2015_2023.xlsx        # Full training set (not included)
+│   │   └── test_2024_2025.xlsx         # Full testing set (not included)
+│   ├── volatility/
+│   │   ├── sample_volatility.csv
+│   │   ├── train_2015_2023.csv
+│   │   └── test_2024_2025.csv
+│   └── sentiment/
+│       ├── sample_sentiment.csv
+│       └── sentiment_training_data.csv
+│
+└── output/
+├── direction/
+│   ├── direction_prediction_results.csv
+│   ├── roc_curves_comparison.png
+│   ├── shap_summary_plot.png
+│   ├── shap_bar_plot.png
+│   ├── trading_strategy_comparison.png
+│   └── strategy_comparison_metrics.csv
+├── volatility/
+│   ├── volatility_prediction_results.csv
+│   ├── model_comparison_visualization.png
+│   ├── regime_analysis_results.csv
+│   ├── regime_analysis_visualization.png
+│   ├── time_series_prediction.png
+│   └── feature_importance.csv
+└── sentiment/
+├── sentiment_classification_results.csv
+├── sentiment_strategy_results.csv
+└── sentiment_backtest_visualization.png
 ```
 
 ## Models
