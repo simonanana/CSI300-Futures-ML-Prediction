@@ -1,5 +1,9 @@
 # CSI 300 Futures Prediction: A Multi-Task Machine Learning Benchmark
 
+[![Python](https://img.shields.io/badge/Python-3.12-blue)](https://www.python.org/)
+[![Jupyter](https://img.shields.io/badge/Notebook-Jupyter-orange)](https://jupyter.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 > **Benchmarking 10 ML/DL models across three prediction tasks on China's CSI 300 Index Futures — direction, volatility, and sentiment breakthrough — with walk-forward evaluation and trading strategy analysis.**
 
 ## Overview
