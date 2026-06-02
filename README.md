@@ -88,6 +88,7 @@ csi300-futures-ml-prediction/
 ├── sentiment_strategy_results.csv
 └── sentiment_backtest_visualization.png
 ```
+> **Note:** Full datasets are excluded from this repository via `.gitignore` due to licensing restrictions. Sample files with the first 20 rows are provided to illustrate the data schema. See [`data/README.md`](data/README.md) for column definitions and instructions on obtaining the data from public sources.
 
 ## Models
 
