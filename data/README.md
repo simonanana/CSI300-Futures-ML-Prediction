@@ -8,7 +8,6 @@ All data are derived from the **CSI 300 Index Futures (IF)** continuous main con
 
 To reproduce, obtain daily OHLC prices and pre-computed technical indicators for the CSI 300 Index Futures from any of the above providers, covering 2015-01-01 through 2025-04-30.
 
----
 
 ## Task 1 — Direction Prediction
 
@@ -45,7 +44,6 @@ To reproduce, obtain daily OHLC prices and pre-computed technical indicators for
 
 > **Note:** The target variable `direction` is generated at runtime: `direction = 1` if next-day return > 0, else `0`. It is not stored in the raw data files.
 
----
 
 ## Task 2 — Volatility Prediction
 
@@ -78,7 +76,6 @@ The following columns are present in the raw data but **must be excluded** durin
 | `low_volatility_regime` | Derived from target |
 | `volatility_target` | Future-looking label |
 
----
 
 ## Task 3 — Sentiment Breakthrough Prediction
 
@@ -122,7 +119,6 @@ target = 1  if  sentiment_score(t+1) − sentiment_score(t) > 10
 
 This represents a "sentiment breakthrough" — a significant next-day increase in market sentiment.
 
----
 
 ## How to Obtain the Data
 
