@@ -83,7 +83,7 @@ The following columns are present in the raw data but **must be excluded** durin
 
 | File | Period | Format | Rows (approx.) |
 |------|--------|--------|-----------------|
-| `sentiment_training_data.csv` | 2015-01 to 2025-04 | CSV | ~2,500 |
+| `Sentiment_Target_Enhanced_data.csv` | 2015-01 to 2025-04 | CSV | ~2,500 |
 
 ### Column Definitions
 
