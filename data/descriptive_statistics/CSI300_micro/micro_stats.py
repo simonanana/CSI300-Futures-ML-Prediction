@@ -1,22 +1,3 @@
-"""
-CSI 300 Index Futures — Exploratory Data Visualization
-=======================================================
-Project : CSI 300 Futures ML Prediction
-         (Direction · Volatility · Sentiment)
-Author  : NTU MH6822 Research Group
-Dataset : micro_data_cleaned.csv
-
-Output files
-------------
-  csi300_time_series.png
-  csi300_hist_plots.png
-  csi300_kde_plots.png
-  csi300_boxplot_plots.png
-  csi300_correlation_heatmap.png
-  numerical_boxplot_plots.png
-  numerical_density_plots.png
-"""
-
 import warnings
 import pandas as pd
 import matplotlib.pyplot as plt
