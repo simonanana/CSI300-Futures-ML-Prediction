@@ -2,6 +2,12 @@
 
 This directory contains the datasets used across the three prediction tasks. **Full datasets are not included** in this repository due to licensing restrictions. Sample files (first 20 rows) are provided to illustrate the schema.
 
+## Data Source
+
+All data are derived from the **CSI 300 Index Futures (IF)** continuous main contract, sourced from [Wind](https://www.wind.com.cn/) / [CSMAR](https://www.gtarsc.com/) / [Tushare](https://tushare.pro/). Daily frequency.
+
+To reproduce, obtain daily OHLC prices and pre-computed technical indicators for the CSI 300 Index Futures from any of the above providers, covering 2015-01-01 through 2025-04-30.
+
 ## Descriptive Statistics
 
 The `descriptive_statistics/` directory contains exploratory data analysis (EDA) outputs that characterize the CSI 300 futures dataset prior to modeling. These are organized into two levels:
@@ -36,12 +42,6 @@ Three additional EDA plots sit at the `descriptive_statistics/` root level:
 - `feature_correlation_matrix.png` — Full correlation matrix across all model input features.
 - `feature_importance_plot.png` — Preliminary feature importance ranking (pre-modeling).
 - `regime_performance_plot.png` — Visual comparison of model behavior across volatility regimes.
-
-## Data Source
-
-All data are derived from the **CSI 300 Index Futures (IF)** continuous main contract, sourced from [Wind](https://www.wind.com.cn/) / [CSMAR](https://www.gtarsc.com/) / [Tushare](https://tushare.pro/). Daily frequency.
-
-To reproduce, obtain daily OHLC prices and pre-computed technical indicators for the CSI 300 Index Futures from any of the above providers, covering 2015-01-01 through 2025-04-30.
 
 
 ## Task 1 — Direction Prediction
