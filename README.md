@@ -46,48 +46,83 @@ This demonstrates the practical value of sentiment breakthrough prediction as a 
 ## Repository Structure
 
 ```
-csi300-futures-ml-prediction/
+CSI300-Futures-ML-Prediction/
 │
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
-│
-├── csi300_ml_prediction.ipynb          # Main notebook — all three tasks
+├── csi300_ml_prediction.ipynb              # Main notebook (all three tasks)
 │
 ├── data/
-│   ├── README.md                       # Data dictionary and sourcing instructions
-│   ├── direction/
-│   │   ├── sample_direction.csv        # Sample data (first 20 rows)
-│   │   ├── train_2015_2023.xlsx        # Full training set
-│   │   └── test_2024_2025.xlsx         # Full testing set
-│   ├── volatility/
-│   │   ├── sample_volatility.csv
-│   │   ├── train_2015_2023.csv
-│   │   └── test_2024_2025.csv
-│   └── sentiment/
-│       ├── sample_sentiment.csv
-│       └── sentiment_training_data.csv
+│   ├── README.md                           # Data dictionary and sourcing instructions
+│   │
+│   ├── descriptive_statistics/             # Exploratory data analysis
+│   │   ├── feature_correlation_matrix.png
+│   │   ├── feature_importance_plot.png
+│   │   ├── regime_performance_plot.png
+│   │   │
+│   │   ├── CSI300_macro/                   # Macroeconomic descriptive statistics
+│   │   │   ├── macro_stats.py
+│   │   │   ├── macro_correlation_heatmap.png
+│   │   │   ├── macro_boxplot_plots.png
+│   │   │   ├── macro_hist_plots.png
+│   │   │   ├── macro_kde_plots.png
+│   │   │   └── macro_*_timeseries.png      # Time-series plots for macro variables
+│   │   │
+│   │   └── CSI300_micro/                   # Micro-level (futures contract) descriptive statistics
+│   │       ├── micro_stats.py
+│   │       ├── micro_data_cleaned.csv
+│   │       ├── csi300_correlation_heatmap.png
+│   │       ├── csi300_boxplot_plots.png
+│   │       ├── csi300_hist_plots.png
+│   │       ├── csi300_kde_plots.png
+│   │       ├── csi300_time_series.png
+│   │       ├── numerical_boxplot_plots.png
+│   │       └── numerical_density_plots.png
+│   │
+│   ├── direction/                          # Task 1 data
+│   │   ├── sample_direction.csv            # Sample data (first 20 rows)
+│   │   ├── train15-23.xlsx                 # Training set: 2015–2023
+│   │   └── test24-25.xlsx                  # Testing set: 2024–2025
+│   │
+│   ├── volatility/                         # Task 2 data
+│   │   ├── data_train_2015_2023.xlsx       # Training set: 2015–2023
+│   │   ├── data_test_2024_2025.xlsx        # Testing set: 2024–2025
+│   │   └── data_cleaned_no_leakage.csv     # Cleaned data with leakage features removed
+│   │
+│   └── sentiment/                          # Task 3 data
+│       └── Sentiment_Target_Enhanced_data.csv
 │
 └── output/
-├── direction/
-│   ├── direction_prediction_results.csv
-│   ├── roc_curves_comparison.png
-│   ├── shap_summary_plot.png
-│   ├── shap_bar_plot.png
-│   ├── trading_strategy_comparison.png
-│   └── strategy_comparison_metrics.csv
-├── volatility/
-│   ├── volatility_prediction_results.csv
-│   ├── model_comparison_visualization.png
-│   ├── regime_analysis_results.csv
-│   ├── regime_analysis_visualization.png
-│   ├── time_series_prediction.png
-│   └── feature_importance.csv
-└── sentiment/
-├── sentiment_classification_results.csv
-├── sentiment_strategy_results.csv
-└── sentiment_backtest_visualization.png
-```
+    ├── direction/                          # Task 1 results
+    │   ├── traditional_ml_classification_results.csv
+    │   ├── deep_learning_classification_results.csv
+    │   ├── trading_strategy_metrics.csv
+    │   ├── model_comparison_results.png
+    │   ├── roc_curves_comparison.png
+    │   ├── shap_classification_summary.png
+    │   ├── shap_classification_importance.png
+    │   └── comprehensive_strategy_analysis.png
+    │
+    ├── volatility/                         # Task 2 results
+    │   ├── model_comparison_visualization.png
+    │   ├── volatility_models_comparison_visualization.png
+    │   ├── regime_analysis_visualization.png
+    │   ├── time_series_prediction.png
+    │   └── feature_engineering_summary.png
+    │
+    └── sentiment/                          # Task 3 results
+        ├── complete_analysis_results_EN.xlsx
+        ├── model_comparison.png
+        ├── model_comparison_complete_EN.png
+        ├── roc_curves_all_models.png
+        ├── comprehensive_analysis.png
+        ├── comprehensive_strategy_analysis.png
+        ├── strategy_analysis_complete_EN.png
+        ├── threshold_analysis.png
+        └── metric_comparison_by_threshold.png
+``````
+
 > **Note:** Full datasets are excluded from this repository via `.gitignore` due to licensing restrictions. Sample files with the first 20 rows are provided to illustrate the data schema. See [`data/README.md`](data/README.md) for column definitions and instructions on obtaining the data from public sources.
 
 ## Models
