@@ -123,7 +123,7 @@ CSI300-Futures-ML-Prediction/
         └── metric_comparison_by_threshold.png
 ``````
 
-> **Note:** Full datasets are excluded from this repository via `.gitignore` due to licensing restrictions. Sample files with the first 20 rows are provided to illustrate the data schema. See [`data/README.md`](data/README.md) for column definitions and instructions on obtaining the data from public sources.
+> **Note:** Raw datasets are included for reproducibility. The `data/` directory also contains a `descriptive_statistics/` subdirectory with EDA scripts and visualizations characterizing the dataset at both macro and micro levels. See [`data/README.md`](data/README.md) for column definitions, descriptive statistics documentation, and data sourcing instructions.
 
 ## Models
 
@@ -178,6 +178,3 @@ pip install numpy pandas scikit-learn xgboost lightgbm catboost tensorflow shap 
 1. Place your CSI 300 futures data files in the `data/` directory (see structure above).
 2. Open and run `csi300_ml_prediction.ipynb` sequentially.
 3. Results and plots will be saved to `output/`.
-
-> **Note:** Data files are not included in this repository due to licensing restrictions.
-
