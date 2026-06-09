@@ -2,6 +2,41 @@
 
 This directory contains the datasets used across the three prediction tasks. **Full datasets are not included** in this repository due to licensing restrictions. Sample files (first 20 rows) are provided to illustrate the schema.
 
+## Descriptive Statistics
+
+The `descriptive_statistics/` directory contains exploratory data analysis (EDA) outputs that characterize the CSI 300 futures dataset prior to modeling. These are organized into two levels:
+
+### Macro-Level Analysis (`CSI300_macro/`)
+
+Descriptive statistics and visualizations for macroeconomic variables relevant to the CSI 300 Index, including the CSI 300 Index change rate, ChiNext Index, Shanghai Composite Index, China CPI (fixed base), and the 10-Year Treasury yield. Outputs include:
+
+- `macro_stats.py` — Script to generate all macro-level descriptive statistics and plots.
+- `macro_correlation_heatmap.png` — Pearson correlation matrix across macroeconomic variables.
+- `macro_hist_plots.png` — Histograms showing the empirical distribution of each macro variable.
+- `macro_kde_plots.png` — Kernel density estimates for distributional shape analysis.
+- `macro_boxplot_plots.png` — Box plots highlighting medians, quartiles, and outliers.
+- `macro_*_timeseries.png` — Time-series plots for selected variable pairs (e.g., CSI 300 vs. ChiNext change rate, CPI vs. 10Y Treasury yield).
+
+### Micro-Level Analysis (`CSI300_micro/`)
+
+Descriptive statistics and visualizations for the futures contract's own features — technical indicators, price-derived variables, and trading activity metrics. Outputs include:
+
+- `micro_stats.py` — Script to generate all micro-level descriptive statistics and plots.
+- `micro_data_cleaned.csv` — Cleaned micro-level feature dataset used in the analysis.
+- `csi300_correlation_heatmap.png` — Feature correlation matrix for multicollinearity diagnostics.
+- `csi300_hist_plots.png` / `csi300_kde_plots.png` — Distribution analysis of technical indicators.
+- `csi300_boxplot_plots.png` / `numerical_boxplot_plots.png` — Outlier and spread analysis.
+- `csi300_time_series.png` — Time-series visualization of key contract-level features.
+- `numerical_density_plots.png` — Density plots for all numerical features.
+
+### Cross-Cutting Plots
+
+Three additional EDA plots sit at the `descriptive_statistics/` root level:
+
+- `feature_correlation_matrix.png` — Full correlation matrix across all model input features.
+- `feature_importance_plot.png` — Preliminary feature importance ranking (pre-modeling).
+- `regime_performance_plot.png` — Visual comparison of model behavior across volatility regimes.
+
 ## Data Source
 
 All data are derived from the **CSI 300 Index Futures (IF)** continuous main contract, sourced from [Wind](https://www.wind.com.cn/) / [CSMAR](https://www.gtarsc.com/) / [Tushare](https://tushare.pro/). Daily frequency.
